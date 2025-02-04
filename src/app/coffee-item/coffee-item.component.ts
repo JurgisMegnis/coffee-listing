@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { CoffeeListing } from '../coffee-listing';
 
 @Component({
   selector: 'app-coffee-item',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   template: `
     <section class="coffee-item">
       @if (coffeeListing.popular) {
