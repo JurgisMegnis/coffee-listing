@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { CoffeeListing } from './coffee-listing';
-import { response } from 'express';
 
 @Injectable({
   providedIn: 'root'
