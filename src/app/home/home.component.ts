@@ -11,12 +11,20 @@ import { SegmentControl } from '../segment-control';
   standalone: true,
   imports: [CoffeeItemComponent, CommonModule, SegmentControlComponent],
   template: `
-    <app-segment-control *ngFor='let filterItem of productFilter' [segmentControl]="filterItem" (selectionChange)="filterResults($event)"></app-segment-control>
-    @if (coffeeList && coffeeList.length > 0) {
-      <app-coffee-item *ngFor="let coffeeItem of filteredCofeeList" [coffeeListing]="coffeeItem"></app-coffee-item>
-    } @else {
-      <p>Loading coffee items..</p>
-    }
+    <section class="intro">
+      <h1>Our Collection</h1>
+      <p>Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.</p>
+    </section>
+    <section class="filter">
+      <app-segment-control *ngFor='let filterItem of productFilter' [segmentControl]="filterItem" (selectionChange)="filterResults($event)"></app-segment-control>
+    </section>
+    <section class="coffee-grid">
+      @if (coffeeList && coffeeList.length > 0) {
+        <app-coffee-item *ngFor="let coffeeItem of filteredCofeeList" [coffeeListing]="coffeeItem"></app-coffee-item>
+      } @else {
+        <p>Loading coffee items..</p>
+      }
+    </section>
   `,
   styleUrl: './home.component.scss'
 })
