@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@mixin heading {
+    font-family: 'DM sans', serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+@mixin body {
+    font-family: 'DM sans', serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@mixin label {
+    font-family: 'DM sans', serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+@mixin s-text {
+    font-family: 'DM sans', serif;
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+
+@mixin price-text {
+    font-family: 'DM sans', serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+$dark-1: #111315;
+$dark-2: #1B1D1F;
+$light: #FEF7EE;
+$yellow: #F6C768;
+$grey-light: #6F757C;
+$grey-dark: #4D5562;
+$mint: #BEE3CC;
+$brown: #302522;
+$brick: #ED735D;
+
+body {
+    background-color: $dark-1;
+    color: $light;
+    background-image: url('../public/bg-cafe.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
