@@ -6,8 +6,8 @@ import { SegmentControl } from '../segment-control';
   standalone: true,
   imports: [],
   template: `
-      <input type="radio" class="{{segmentControl.type}}" id="{{segmentControl.type}}-{{segmentControl.id}}" [name]="segmentControl.type" [value]="segmentControl.name" [checked]="segmentControl.checked" (change)="onInputChange(segmentControl.name)">
-      <label for="{{segmentControl.type}}-{{segmentControl.id}}">{{segmentControl.name}}</label>
+      <input type="radio" class="product-filter" id="product-filter-{{segmentControl.id}}" name="product-filter" [value]="segmentControl.name" [checked]="segmentControl.checked" (change)="onInputChange(segmentControl.name)">
+      <label for="product-filter-{{segmentControl.id}}">{{segmentControl.name}}</label>
   `,
   styleUrl: './segment-control.component.scss'
 })

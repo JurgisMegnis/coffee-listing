@@ -14,6 +14,7 @@ import { SegmentControl } from '../segment-control';
     <section class="intro">
       <h1>Our Collection</h1>
       <p>Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.</p>
+      <img src="vector.svg" alt="">
     </section>
     <section class="filter">
       <app-segment-control *ngFor='let filterItem of productFilter' [segmentControl]="filterItem" (selectionChange)="filterResults($event)"></app-segment-control>
@@ -35,13 +36,11 @@ export class HomeComponent implements OnInit {
   productFilter: SegmentControl[] = [
     {
       "id": 1,
-      "type": "product-filter",
       "name": "All Products",
       "checked": true,
     },
     {
       "id": 2,
-      "type": "product-filter",
       "name": "Available now",
       "checked": false,
     }
