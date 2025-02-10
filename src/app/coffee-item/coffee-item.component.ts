@@ -19,12 +19,12 @@ import { CoffeeListing } from '../coffee-listing';
       <div class="secondary-info">
         @if (coffeeListing.votes > 0) {
           <div class="rating">
-            <img src="Star_fill.svg" alt="">
+            <img src="assets/Star_fill.svg" alt="">
             <h2>{{coffeeListing.rating}} <span>({{coffeeListing.votes}} votes)</span></h2>
           </div>
         } @else {
           <div class="no-rating">
-            <img src="Star.svg" alt="">
+            <img src="assets/Star.svg" alt="">
             <h2>No ratings</h2>
           </div>
         }
